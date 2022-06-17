@@ -1,0 +1,449 @@
+/*Fuente para el sitio web*/
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Roboto+Flex:opsz,wght@8..144,300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Courgette", cursive;
+}
+
+body {
+  background-image: url(../img/fondo03.png);
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+/*GRID*/
+.contenedor-grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 90% 10%;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "fijo fijo"
+    "header header"
+    "banner banner"
+    "principal aside"
+    "footer footer";
+}
+.header {
+  grid-area: header;
+}
+.aviso-fijo {
+  background-color: black;
+  color: white;
+  text-align: center;
+
+  grid-area: fijo;
+}
+.banner {
+  grid-area: banner;
+}
+.contendio-main {
+  grid-area: principal;
+}
+.contenedor-caja {
+  padding: 2% 5% 5% 2%;
+  display: grid;
+  grid-template-columns: repeat(3, 1f);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "caja1 caja2 caja3"
+    "caja4 caja5 caja6";
+  justify-content: space-around;
+  gap: 2%;
+}
+.aside {
+  grid-area: aside;
+}
+.footer {
+  grid-area: footer;
+}
+
+.caja1 {
+  grid-area: caja1;
+}
+.caja2 {
+  grid-area: caja2;
+}
+.caja3 {
+  grid-area: caja3;
+}
+.caja4 {
+  grid-area: caja4;
+}
+.caja5 {
+  grid-area: caja5;
+}
+.caja6 {
+  grid-area: caja6;
+}
+
+/*Fin aplicaciones GRID*/
+
+/*HEADER*/
+.contenedor-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #a10818;
+  color: white;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.header {
+  position: sticky;
+  top: 0;
+}
+ul {
+  list-style: none;
+  font-size: 0;
+  font-size: 1.2rem;
+}
+li {
+  display: inline-block;
+  padding: 10px 50px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+a:link {
+  color: #087bdf;
+}
+
+.img-d {
+  width: 100%;
+  height: 80%;
+}
+
+.contenedor-aside {
+  text-align: center;
+}
+
+/*MAIN*/
+h2 {
+  font-family: "Courgette", cursive;
+  font-size: 3rem;
+  color: #087bdf;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 20px;
+  padding: 20px 0;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  width: 100%;
+  height: 90%;
+  justify-content: flex-end;
+  padding: 1%;
+}
+
+.producto:hover {
+  transform: translateY(-3px);
+  -webkit-box-shadow: 12px -13px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 12px -13px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 12px -13px 5px 0px rgba(0, 0, 0, 0.25);
+}
+.img-prod {
+  width: 100%;
+  height: 88%;
+}
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(161, 8, 24, 1) 46%,
+    rgba(205, 61, 55, 1) 100%
+  );
+}
+.btn-prod {
+  padding: 4px;
+  font-size: 1rem;
+  border: 2px solid white;
+  background: linear-gradient(
+    90deg,
+    rgba(161, 8, 24, 1) 46%,
+    rgba(205, 61, 55, 1) 100%
+  );
+}
+/*FOOTER*/
+footer {
+  background-color: #a10818;
+  color: white;
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
+}
+.contenedor-aside {
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.contenedor-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 1%;
+}
+
+/*PAGINA DE PRODUCTOS*/
+
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "caja1 caja2 caja3 caja4"
+    "caja5 caja6 caja7 caja8"
+    "caja9 caja10 caja11 caja12";
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2%;
+  margin: 0 5%;
+}
+.caja1 {
+  grid-area: caja1;
+}
+.caja2 {
+  grid-area: caja2;
+}
+.caja3 {
+  grid-area: caja3;
+}
+.caja4 {
+  grid-area: caja4;
+}
+.caja5 {
+  grid-area: caja5;
+}
+.caja6 {
+  grid-area: caja6;
+}
+
+.caja7 {
+  grid-area: caja7;
+}
+.caja8 {
+  grid-area: caja8;
+}
+.caja9 {
+  grid-area: caja9;
+}
+.caja10 {
+  grid-area: caja10;
+}
+.caja11 {
+  grid-area: caja11;
+}
+.caja12 {
+  grid-area: caja12;
+}
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4%;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.1s ease;
+  margin: 3%;
+  background: linear-gradient(
+    90deg,
+    rgba(161, 8, 24, 1) 46%,
+    rgba(205, 61, 55, 1) 100%
+  );
+  height: 100%;
+}
+.productos:hover {
+  transform: translateY(-3px);
+  -webkit-box-shadow: 12px -13px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 12px -13px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 12px -13px 5px 0px rgba(0, 0, 0, 0.25);
+}
+.btn {
+  width: 90%;
+  padding: 5px;
+  font-size: 1rem;
+  border: 2px solid white;
+  text-align: center;
+  background-color: #a40919;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 3s;
+}
+.btn:hover {
+  background-color: #cd3d37;
+}
+
+/*RESPONSIVE*/
+/*Mobile*/
+@media (max-width: 480px) {
+  .contenedor-caja {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "caja1"
+      "caja2"
+      "caja3"
+      "caja4"
+      "caja5"
+      "caja6";
+    justify-content: space-around;
+  }
+  .banner {
+    display: none;
+  }
+  .aside {
+    display: flex;
+    flex-direction: column;
+  }
+  .c-d {
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  /*Productos*/
+  .contenedor-productos {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "caja1"
+      "caja2"
+      "caja3"
+      "caja4"
+      "caja5"
+      "caja6"
+      "caja7"
+      "caja8"
+      "caja9"
+      "caja10"
+      "caja11"
+      "caja12";
+    justify-content: space-around;
+  }
+}
+/*Tablet*/
+@media screen and (max-width: 768px) {
+  .contenedor-header {
+    background-color: #be091c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  li {
+    display: block;
+  }
+
+  .contenedor-grid {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "fijo fijo"
+      "header header"
+      "banner banner"
+      "principal principal"
+      "aside aside"
+      "footer footer";
+  }
+  .contenedor-caja {
+    grid-template-areas:
+      "caja1 caja2"
+      "caja3 caja4"
+      "caja5 caja6";
+    justify-content: space-around;
+  }
+
+  .contenedor-aside {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .c-d {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .c-d img {
+    width: 60%;
+    height: 60%;
+  }
+  .descripcion-sublime {
+    display: none;
+  }
+  .contenedor-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /*Productos*/
+  .contenedor-productos {
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "caja1 caja2"
+      "caja3 caja4"
+      "caja5 caja6"
+      "caja7 caja8"
+      "caja9 caja10"
+      "caja11 caja12";
+    justify-content: space-around;
+  }
+}
+/*Animacion banner*/
+
+@keyframes banner-animacion {
+  0% {
+    background-image: url(../img/banner05.jpg);
+  }
+  25% {
+    background-image: url(../img/banner05.jpg);
+  }
+  50% {
+    background-image: url(../img/banner02.JPG);
+  }
+  75% {
+    background-image: url(../img/banner03.jpg);
+  }
+  100% {
+    background-image: url(../img/banner04.jpg);
+  }
+}
+
+.banner {
+  width: 100%;
+  height: 650px;
+  background-size: cover;
+  animation-name: banner-animacion;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  background-image: url(../img/banner05.jpg);
+}
